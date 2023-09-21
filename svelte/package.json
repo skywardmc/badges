@@ -20,11 +20,13 @@
     "lint": "eslint ."
   },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
-    }
-  },
+    ".": {"types": "./dist/index.d.ts", "svelte": "./dist/index.js"},
+		"./Badge.svelte": {"types": "./dist/components/Badge.svelte.d.ts", "svelte": "./dist/components/Badge.svelte"},
+		"./BadgeRaw.svelte": {"types": "./dist/components/BadgeRaw.svelte.d.ts", "svelte": "./dist/components/BadgeRaw.svelte"},
+		"./Badges.svelte": {"types": "./dist/components/Badges.svelte.d.ts", "svelte": "./dist/components/Badges.svelte"},
+		"./badge.scss": "./dist/css/badge.scss",
+		"./branding.scss": "./dist/css/branding.scss"
+	},
   "files": [
     "dist",
     "!dist/**/*.test.*",
