@@ -1,0 +1,66 @@
+.badges {
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;
+	justify-content: center;
+	gap: 0.5em;
+}
+
+/* I'm sure this is intended */
+.badge {
+	font-family: 'Inter', Avenir, Helvetica, Arial, FreeSans, 'Liberation Sans', sans-serif;
+	display: block;
+	width: fit-content;
+	height: 56px;
+	border-radius: 8px;
+	background: var(--fill, #808);
+	text-decoration: none;
+
+	&.inline { display: block-inline; }
+
+	> div {
+		border-radius: 8px;
+		border: 2px solid #FFFFFF26;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		flex-basis: fit-content;
+		gap: 8px;
+
+		> span {
+			display: flex;
+			flex-direction: column;
+			flex-shrink: 2;
+			line-height: 18px;
+			text-shadow: 0 0 5px #0000004F;
+		}
+
+		/**
+		 * Fixes a rendering bug in Firefox where the
+		 * shadow doesn't cross the div boundary.
+		 *
+		 * The proper way would be using `padding: 0 10px;`.
+		 *
+		 * This essentially makes the image and sub-div forcefully
+		 * grow the parent div rather than relying on padding to
+		 * do so correctly.
+		 */
+		> :first-child {
+			margin-left: 10px;
+		}
+
+		> :last-child {
+			margin-right: 10px;
+		}
+	}
+	span { color: #eaeaea; }
+	img, svg {
+		width: 40px; // auto
+		height: 40px;
+		border-radius: 8px;
+		filter: drop-shadow(0 0 5px #0000004F);
+		background: var(--icon-fill, #000);
+	}
+}

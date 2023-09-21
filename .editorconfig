@@ -1,0 +1,26 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = tab
+indent_size = 3
+
+[{*.yml,*.yaml}]
+indent_style = space
+indent_size = 2
+
+[*.json]
+indent_size = 2
+
+# # The Node.JS ecosystem seems to like emitting 2-spaced files.
+# # Since these files are usually automatically managed,
+# # it's fine to ignore these.
+# [{package.json,yarn.lock}]
+# indent_style = space
+# indent_size = 2
+
+[*.bat]
+end_of_line = crlf
